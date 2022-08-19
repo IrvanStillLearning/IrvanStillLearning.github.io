@@ -34,6 +34,15 @@ $(document).ready(function () {
         }, 500 * (i+1));
       })
     }
+    if($(window).scrollTop() > $('.contact-me').offset().top - 500) {
+      $('.contact-me').each(function(i){
+        setTimeout(function(){
+          $('.contact-me').eq(0).addClass('swipelr');
+          $('.contact-me').eq(1).addClass('swipelr');
+        }, 500);
+      })
+    }
+
 
     if ($(window).scrollTop() < $("#gallery-scroll").offset().top - 300) {
       $(".page-scroll").removeClass("active");
